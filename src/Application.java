@@ -21,13 +21,13 @@ class Application implements Runnable {
 
         Generic generic = new Generic();
 
-        generic.firstMethod(covariantTelephone); // Forwarding to trucar() using Telephone as reference type
+        generic.trucar(covariantTelephone); // Forwarding to trucar() using Telephone as reference type
 
-        generic.firstMethod(actualSmartphone);   // Forwarding to trucar() using Smartphone as reference type
-        generic.secondMethod(actualSmartphone); // Forwarding to ferFotos() using Smartphone as reference type
+        generic.trucar(actualSmartphone);   // Forwarding to trucar() using Smartphone as reference type
+        generic.ferFotos(actualSmartphone); // Forwarding to ferFotos() using Smartphone as reference type
 
-        generic.secondMethodSafeCase(() -> System.out.println("ferFotos")); // Functional interface in order to fake a non-Smartphone Telephone subtype
-        generic.secondMethodSafeCase(covariantTelephone); // Forwarding to ferFotos using a Smartphone as reference type
+        generic.ferFotosSafe(() -> System.out.println("ferFotos")); // Functional interface in order to fake a non-Smartphone Telephone subtype
+        generic.ferFotosSafe(covariantTelephone); // Forwarding to ferFotos using a Smartphone as reference type
 
 
     }

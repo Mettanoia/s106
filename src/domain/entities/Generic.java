@@ -2,15 +2,15 @@ package domain.entities;
 
 public class Generic {
 
-    public <T extends Telephone> void firstMethod(T e) {
+    public <T extends Telephone> void trucar(T e) {
         e.trucar();
     }
 
-    public <R extends Smartphone> void secondMethod(R r) {
+    public <R extends Smartphone> void ferFotos(R r) {
         r.ferFotos();
     }
 
-    public <Q extends Telephone> void secondMethodSafeCase(Q q) {
+    public <Q extends Telephone> void ferFotosSafe(Q q) {
         try {
 
             Smartphone smartphone = (Smartphone) q;
@@ -20,8 +20,6 @@ public class Generic {
 
             System.out.println("Cannot call ferFotos(). " + q.getClass() + "is not of type Smartphone");
 
-        } catch (Exception e) {
-            throw new RuntimeException(e); // If there is an Exception while closing we will consider it an invariant violation
         }
     }
 
