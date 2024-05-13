@@ -1,4 +1,5 @@
-package domain.entities;
+package n1.domain.entities;
+
 
 public class Generic {
 

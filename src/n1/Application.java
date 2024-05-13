@@ -1,6 +1,8 @@
-import domain.entities.Generic;
-import domain.entities.Smartphone;
-import domain.entities.Telephone;
+package n1;
+
+import n1.domain.entities.Generic;
+import n1.domain.entities.Smartphone;
+import n1.domain.entities.Telephone;
 
 /**
  * <p>Per fer aquest exercici necessites una interfície anomenada Telefon i tres classes: Smartphone, Generica i la Principal.</p>
@@ -28,7 +30,6 @@ class Application implements Runnable {
 
         generic.ferFotosSafe(() -> System.out.println("ferFotos")); // Functional interface in order to fake a non-Smartphone Telephone subtype
         generic.ferFotosSafe(covariantTelephone); // Forwarding to ferFotos using a Smartphone as reference type
-
 
     }
 }
